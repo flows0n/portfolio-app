@@ -1,24 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import * as Scroll from 'react-scroll';
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Scroll.Element name="test1" style={{ height: '100vh', backgroundColor: 'red' }}>
+        test 1
+      </Scroll.Element>
+      <Scroll.Element name="test2" style={{ height: '100vh', backgroundColor: 'green' }}>
+        test 1
+      </Scroll.Element>
+      <Scroll.Element name="test3" style={{ height: '100vh', backgroundColor: 'blue' }}>
+        test 1
+      </Scroll.Element>
+      <Scroll.Element name="test4" style={{ height: '100vh', backgroundColor: 'yellow' }}>
+        test 1
+      </Scroll.Element>
     </div>
   );
 }
