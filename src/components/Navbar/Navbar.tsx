@@ -1,11 +1,10 @@
-import React from 'react';
-import { Nav, NavCoontainer, NavLink, HamburgerMenu } from './Elements.styled';
-import { useTheme } from '../../hooks/useTheme';
-import { FiMenu, FiSun, FiMoon } from 'react-icons/fi';
-import { motion } from 'framer-motion';
+import React, { useEffect, useState } from 'react';
+import { Nav, NavCoontainer, NavLink, HamburgerButton } from './Elements.styled';
+import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
+import Hamburger from 'hamburger-react';
 
 const Navbar = () => {
-  const { themeToggler, selectedTheme } = useTheme();
+  const [isMenuVisible, setIsMenuVisible] = useState<boolean>(false);
   return (
     <Nav>
       <NavCoontainer>
@@ -22,19 +21,16 @@ const Navbar = () => {
           Skills
         </NavLink>
       </NavCoontainer>
-      <motion.div
-        whileHover={{ scale: 1.1, rotate: 45 }}
-        whileTap={{ scale: 0.9 }}
-        onClick={themeToggler}>
-        {selectedTheme === 'light' ? <FiSun size="2em" /> : <FiMoon size="2em" />}
-      </motion.div>
-      <HamburgerMenu
-        onClick={themeToggler}
-        as={motion.div}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}>
-        <FiMenu size="2em" />
-      </HamburgerMenu>
+      <HamburgerButton>
+        <Hamburger
+          direction="left"
+          toggle={setIsMenuVisible}
+          toggled={isMenuVisible}
+          easing="ease-in-out"
+          size={32}
+        />
+      </HamburgerButton>
+      <HamburgerMenu isVisible={isMenuVisible} setIsVisible={setIsMenuVisible} />
     </Nav>
   );
 };

@@ -1,27 +1,27 @@
 import styled from 'styled-components';
 import * as Scroll from 'react-scroll';
-import { COLORS } from '../../theme/Colors';
 
 export const Nav = styled.nav`
-  position: sticky;
+  position: fixed;
   top: 0;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   height: 64px;
-  background-color: ${COLORS.black};
   width: 100vw;
   box-sizing: border-box;
-  color: ${COLORS.blueLight};
   padding: 0px 20px;
   transition: all linear;
+  background-color: ${({ theme }) => theme.body};
   @media screen and (max-width: 720px) {
     height: 48px;
     justify-content: end;
   }
 `;
-export const HamburgerMenu = styled.div`
+export const HamburgerButton = styled.div`
+  z-index: 2;
+  transition: all linear 300ms;
   display: none;
 
   @media screen and (max-width: 720px) {
@@ -39,7 +39,6 @@ export const NavCoontainer = styled.div`
 `;
 export const NavLink = styled(Scroll.Link)`
   cursor: pointer;
-  color: ${COLORS.blueLight};
   box-sizing: border-box;
   display: flex;
   width: 120px;
@@ -55,6 +54,6 @@ export const NavLink = styled(Scroll.Link)`
   }
   &.active {
     font-size: 1.175em;
-    border-bottom: 2px solid ${COLORS.blueLight};
+    border-bottom: 2px solid ${({ theme }) => theme.text};
   }
 `;
