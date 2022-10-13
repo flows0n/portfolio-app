@@ -1,25 +1,29 @@
 import React from 'react';
-import './App.css';
 import * as Scroll from 'react-scroll';
 import Navbar from './components/Navbar/Navbar';
+import TitleSection from './components/Sections/TitleSection/TitleSection';
+import { ThemeProvider } from 'styled-components';
+import { GlobalStyle, lightTheme, darkTheme } from './theme/GlobalStyle';
+import { useTheme } from './hooks/useTheme';
 
 function App() {
+  const { selectedTheme } = useTheme();
+
   return (
-    <div className="App">
+    <ThemeProvider theme={selectedTheme === 'light' ? lightTheme : darkTheme}>
+      <GlobalStyle />
       <Navbar />
-      <Scroll.Element name="test1" style={{ height: '100vh', backgroundColor: 'red' }}>
+      <TitleSection />
+      <Scroll.Element name="test2" style={{ height: '100vh', backgroundColor: '#98C1D9' }}>
         test 1
       </Scroll.Element>
-      <Scroll.Element name="test2" style={{ height: '100vh', backgroundColor: 'green' }}>
+      <Scroll.Element name="test3" style={{ height: '100vh', backgroundColor: '#E0FBFC' }}>
         test 1
       </Scroll.Element>
-      <Scroll.Element name="test3" style={{ height: '100vh', backgroundColor: 'blue' }}>
+      <Scroll.Element name="test4" style={{ height: '100vh', backgroundColor: '#98C1D9' }}>
         test 1
       </Scroll.Element>
-      <Scroll.Element name="test4" style={{ height: '100vh', backgroundColor: 'yellow' }}>
-        test 1
-      </Scroll.Element>
-    </div>
+    </ThemeProvider>
   );
 }
 
