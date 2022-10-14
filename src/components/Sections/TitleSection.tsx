@@ -1,5 +1,22 @@
 import React from 'react';
-import { Section, SubTitle, Title, TitleContainer } from './Elements.styled';
+import Section from '../shared/Section';
+import styled from 'styled-components';
+
+const TitleContainer = styled.div`
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
+`;
+
+const Title = styled.h1`
+  font-size: 2.5em;
+  font-weight: 600;
+`;
+
+const SubTitle = styled.h3`
+  font-size: 1.5em;
+  font-weight: 200;
+`;
 
 const TitleSection = () => {
   return (

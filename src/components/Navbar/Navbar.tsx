@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Nav, NavCoontainer, NavLink } from './Elements.styled';
+import { Nav, NavCoontainer } from './Elements.styled';
 import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 import { Squash as Hamburger } from 'hamburger-react';
 import * as Scroll from 'react-scroll';
 import ThemeToggler, { IThemeTogglerProps } from '../shared/ThemeToggler';
 import useMobileView from '../../hooks/useMobileView';
+import NavLinks from '../shared/NavLinks';
 
 const Navbar = ({ toggleTheme }: IThemeTogglerProps) => {
   const [isMenuVisible, setIsMenuVisible] = useState<boolean>(false);
@@ -14,20 +15,8 @@ const Navbar = ({ toggleTheme }: IThemeTogglerProps) => {
       {!isMobile ? (
         <>
           <ThemeToggler toggleTheme={toggleTheme} />
-
           <NavCoontainer>
-            <NavLink activeClass="active" to="aboutMe" spy smooth>
-              About Me
-            </NavLink>
-            <NavLink activeClass="active" to="experience" spy smooth>
-              Experience
-            </NavLink>
-            <NavLink activeClass="active" to="myProjects" spy smooth>
-              My projects
-            </NavLink>
-            <NavLink activeClass="active" to="test4" spy smooth>
-              Skills
-            </NavLink>
+            <NavLinks />
           </NavCoontainer>
           <Scroll.Link
             to="title"
@@ -56,7 +45,8 @@ const Navbar = ({ toggleTheme }: IThemeTogglerProps) => {
               rounded
             />
           </div>
-          <HamburgerMenu isVisible={isMenuVisible} setIsVisible={setIsMenuVisible}>
+          <HamburgerMenu isVisible={isMenuVisible}>
+            <NavLinks setIsVisible={setIsMenuVisible} />
             <ThemeToggler toggleTheme={toggleTheme} />
           </HamburgerMenu>
         </>

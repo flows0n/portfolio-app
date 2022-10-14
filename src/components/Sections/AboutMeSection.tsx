@@ -1,5 +1,5 @@
 import React from 'react';
-import { Section } from './TitleSection/Elements.styled';
+import Section from '../shared/Section';
 
 const AboutMeSection = () => {
   return <Section name="aboutMe"></Section>;

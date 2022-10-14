@@ -1,10 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { NavLink } from '../Navbar/Elements.styled';
 
 export interface IHamburgerMenuProps {
   isVisible: boolean;
-  setIsVisible: (value: boolean) => void;
   children?: React.ReactNode;
 }
 
@@ -13,6 +11,7 @@ interface IStyledContainerProps {
 }
 
 const Container = styled.div<IStyledContainerProps>`
+  touch-action: none;
   box-sizing: border-box;
   position: fixed;
   height: 100%;
@@ -31,27 +30,8 @@ const Container = styled.div<IStyledContainerProps>`
   gap: 1px;
 `;
 
-const HamburgerMenu = ({ isVisible, setIsVisible, children }: IHamburgerMenuProps) => {
-  const handleClick = () => {
-    setIsVisible(false);
-  };
-  return (
-    <Container isVisible={isVisible}>
-      <NavLink activeClass="active" to="aboutMe" onClick={handleClick} spy smooth>
-        About Me
-      </NavLink>
-      <NavLink activeClass="active" to="experience" onClick={handleClick} spy smooth>
-        Experience
-      </NavLink>
-      <NavLink activeClass="active" to="myProjects" onClick={handleClick} spy smooth>
-        My projects
-      </NavLink>
-      <NavLink activeClass="active" to="test4" onClick={handleClick} spy smooth>
-        Skills
-      </NavLink>
-      {children}
-    </Container>
-  );
+const HamburgerMenu = ({ isVisible, children }: IHamburgerMenuProps) => {
+  return <Container isVisible={isVisible}>{children}</Container>;
 };
 
 export default HamburgerMenu;

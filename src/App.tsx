@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from './components/Navbar/Navbar';
-import TitleSection from './components/Sections/TitleSection/TitleSection';
+import TitleSection from './components/Sections/TitleSection';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from './theme/GlobalStyle';
 import AboutMeSection from './components/Sections/AboutMeSection';
