@@ -64,5 +64,6 @@ body {
   }
   html {
 	height: -webkit-fill-available;
+	-webkit-tap-highlight-color: transparent;
   }
 `;

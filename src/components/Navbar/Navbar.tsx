@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { Nav, NavCoontainer } from './Elements.styled';
 import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 import { Squash as Hamburger } from 'hamburger-react';
-import * as Scroll from 'react-scroll';
 import ThemeToggler, { IThemeTogglerProps } from '../shared/ThemeToggler';
 import useMobileView from '../../hooks/useMobileView';
 import NavLinks from '../shared/NavLinks';
+import SocialLinks from '../shared/SocialLinks';
 
 const Navbar = ({ toggleTheme }: IThemeTogglerProps) => {
   const [isMenuVisible, setIsMenuVisible] = useState<boolean>(false);
@@ -18,19 +18,6 @@ const Navbar = ({ toggleTheme }: IThemeTogglerProps) => {
           <NavCoontainer>
             <NavLinks />
           </NavCoontainer>
-          <Scroll.Link
-            to="title"
-            smooth
-            style={{
-              display: 'block',
-              width: 'max-content',
-              padding: 'auto 0',
-              fontSize: '1.25em',
-              fontWeight: '600',
-              textAlign: 'center'
-            }}>
-            Bartosz Maliszewski
-          </Scroll.Link>
         </>
       ) : (
         <>
@@ -48,6 +35,7 @@ const Navbar = ({ toggleTheme }: IThemeTogglerProps) => {
           <HamburgerMenu isVisible={isMenuVisible}>
             <NavLinks setIsVisible={setIsMenuVisible} />
             <ThemeToggler toggleTheme={toggleTheme} />
+            <SocialLinks />
           </HamburgerMenu>
         </>
       )}

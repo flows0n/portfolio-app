@@ -1,6 +1,5 @@
 import React from 'react';
 import Navbar from './components/Navbar/Navbar';
-import TitleSection from './components/Sections/TitleSection';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from './theme/GlobalStyle';
 import AboutMeSection from './components/Sections/AboutMeSection';
@@ -8,6 +7,7 @@ import ExperienceSection from './components/Sections/ExperienceSection';
 import useTheme from './hooks/useTheme';
 import { darkTheme, lightTheme } from './theme/Themes';
 import MyProjectsSection from './components/Sections/MyProjectsSection';
+import SkillsSection from './components/Sections/SkillsSection';
 
 function App() {
   const { theme, toggleTheme } = useTheme();
@@ -17,8 +17,8 @@ function App() {
       <>
         <GlobalStyle />
         <Navbar toggleTheme={toggleTheme} />
-        <TitleSection />
         <AboutMeSection />
+        <SkillsSection />
         <ExperienceSection />
         <MyProjectsSection />
       </>

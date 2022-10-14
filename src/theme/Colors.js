@@ -1,9 +1,9 @@
 export const COLORS = {
-  outerSpace: '#29363A',
-  jaffa: '#F26848',
-  bismark: '#426389',
-  aquaIsland: '#98BFD9',
-  athensGray: '#F8F9FB',
+  spaceCadet: '#2B2D42',
+  manatee: '#8D99AE',
+  cultured: '#EDF2F4',
+  imperialRed: '#EF233C',
+  amaranthRed: '#D90429',
 
   black: '#000',
   white: '#fff'

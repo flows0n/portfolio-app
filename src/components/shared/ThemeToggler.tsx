@@ -9,6 +9,7 @@ export interface IThemeTogglerProps {
 
 const ToggleContainer = styled.div`
   border: 2px solid ${({ theme }) => theme.text};
+  margin: 10px;
   padding: 5px;
   display: flex;
   flex-flow: row nowrap;

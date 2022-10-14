@@ -1,13 +1,13 @@
 import { COLORS } from './Colors';
 
 export const lightTheme = {
-  body: COLORS.athensGray,
-  text: COLORS.outerSpace,
-  nav: COLORS.aquaIsland
+  body: COLORS.cultured,
+  text: COLORS.spaceCadet,
+  accent: COLORS.amaranthRed
 };
 
 export const darkTheme = {
-  body: COLORS.outerSpace,
-  text: COLORS.athensGray,
-  nav: COLORS.aquaIsland
+  body: COLORS.spaceCadet,
+  text: COLORS.cultured,
+  accent: COLORS.imperialRed
 };

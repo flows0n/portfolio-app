@@ -25,7 +25,9 @@ const Container = styled.div<IStyledContainerProps>`
   transition: all ease-in-out 0.2s;
   display: flex;
   flex-flow: column nowrap;
+  justify-content: space-evenly;
   align-items: center;
+  align-content: center;
   padding: 32px 0px;
   gap: 1px;
 `;
