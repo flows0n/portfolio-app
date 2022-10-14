@@ -30,7 +30,7 @@ export const NavLink = styled(Scroll.Link)`
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 100%;
+  height: min-content;
   width: 400;
   transition: all ease-in-out 0.2s;
 

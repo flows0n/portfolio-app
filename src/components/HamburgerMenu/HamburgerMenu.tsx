@@ -13,6 +13,7 @@ interface IStyledContainerProps {
 }
 
 const Container = styled.div<IStyledContainerProps>`
+  box-sizing: border-box;
   position: fixed;
   height: 100%;
   width: 100vw;
@@ -26,6 +27,8 @@ const Container = styled.div<IStyledContainerProps>`
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  padding: 32px 0px;
+  gap: 1px;
 `;
 
 const HamburgerMenu = ({ isVisible, setIsVisible, children }: IHamburgerMenuProps) => {
