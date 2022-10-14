@@ -8,19 +8,19 @@ import { lightTheme, darkTheme } from './theme/Themes';
 
 function App() {
   return (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={lightTheme}>
       <>
         <GlobalStyle />
         <Navbar />
         <TitleSection />
 
-        <Scroll.Element name="test2" style={{ height: '100vh', backgroundColor: '#98C1D9' }}>
+        <Scroll.Element name="test2" style={{ height: '100vh' }}>
           test 1
         </Scroll.Element>
-        <Scroll.Element name="test3" style={{ height: '100vh', backgroundColor: '#E0FBFC' }}>
+        <Scroll.Element name="test3" style={{ height: '100vh' }}>
           test 1
         </Scroll.Element>
-        <Scroll.Element name="test4" style={{ height: '100vh', backgroundColor: '#98C1D9' }}>
+        <Scroll.Element name="test4" style={{ height: '100vh' }}>
           test 1
         </Scroll.Element>
       </>

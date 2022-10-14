@@ -1,9 +1,10 @@
 export const COLORS = {
-  blueDark: '#3D5A80',
-  blue: '#98C1D9',
-  blueLight: '#E0FBFC',
-  navy: '#293241',
-  coral: '#EE6C4D',
+  outerSpace: '#29363A',
+  jaffa: '#F26848',
+  bismark: '#426389',
+  aquaIsland: '#98BFD9',
+  athensGray: '#F8F9FB',
+
   black: '#000',
   white: '#fff'
 };

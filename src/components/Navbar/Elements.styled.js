@@ -4,11 +4,8 @@ import * as Scroll from 'react-scroll';
 export const Nav = styled.nav`
   position: fixed;
   top: 0;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
   height: 64px;
+  display: flex;
   width: 100vw;
   box-sizing: border-box;
   padding: 0px 20px;
@@ -35,6 +32,10 @@ export const NavCoontainer = styled.div`
     position: relative;
     display: flex;
     height: inherit;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
   }
 `;
 export const NavLink = styled(Scroll.Link)`
