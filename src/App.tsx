@@ -1,28 +1,26 @@
 import React from 'react';
-import * as Scroll from 'react-scroll';
 import Navbar from './components/Navbar/Navbar';
 import TitleSection from './components/Sections/TitleSection/TitleSection';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from './theme/GlobalStyle';
-import { lightTheme, darkTheme } from './theme/Themes';
+import AboutMeSection from './components/Sections/AboutMeSection';
+import ExperienceSection from './components/Sections/ExperienceSection';
+import useTheme from './hooks/useTheme';
+import { darkTheme, lightTheme } from './theme/Themes';
+import MyProjectsSection from './components/Sections/MyProjectsSection';
 
 function App() {
+  const { theme, toggleTheme } = useTheme();
+
   return (
-    <ThemeProvider theme={lightTheme}>
+    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
       <>
         <GlobalStyle />
-        <Navbar />
+        <Navbar toggleTheme={toggleTheme} />
         <TitleSection />
-
-        <Scroll.Element name="test2" style={{ height: '100vh' }}>
-          test 1
-        </Scroll.Element>
-        <Scroll.Element name="test3" style={{ height: '100vh' }}>
-          test 1
-        </Scroll.Element>
-        <Scroll.Element name="test4" style={{ height: '100vh' }}>
-          test 1
-        </Scroll.Element>
+        <AboutMeSection />
+        <ExperienceSection />
+        <MyProjectsSection />
       </>
     </ThemeProvider>
   );

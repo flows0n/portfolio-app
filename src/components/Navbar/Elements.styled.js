@@ -5,39 +5,23 @@ export const Nav = styled.nav`
   position: fixed;
   top: 0;
   height: 64px;
-  display: flex;
   width: 100vw;
   box-sizing: border-box;
   padding: 0px 20px;
-  transition: all linear;
-  background-color: ${({ theme }) => theme.body};
-  @media screen and (max-width: 720px) {
-    height: 48px;
-    justify-content: end;
-  }
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  justify-content: space-between;
+  align-items: center;
 `;
-export const HamburgerButton = styled.div`
-  z-index: 2;
-  transition: all linear 300ms;
-  display: none;
 
-  @media screen and (max-width: 720px) {
-    display: block;
-  }
-`;
 export const NavCoontainer = styled.div`
-  display: none;
-
-  @media screen and (min-width: 720px) {
-    position: relative;
-    display: flex;
-    height: inherit;
-    margin: 0 auto;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-  }
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  height: inherit;
 `;
+
 export const NavLink = styled(Scroll.Link)`
   cursor: pointer;
   box-sizing: border-box;
@@ -47,8 +31,8 @@ export const NavLink = styled(Scroll.Link)`
   align-items: center;
   text-align: center;
   height: 100%;
-
-  transition: all 200ms linear;
+  width: 400;
+  transition: all ease-in-out 0.2s;
 
   :hover {
     font-size: 1.25em;

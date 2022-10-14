@@ -1,5 +1,12 @@
 import { createGlobalStyle } from 'styled-components';
-import '@fontsource/poppins';
+import '@fontsource/poppins/100.css';
+import '@fontsource/poppins/200.css';
+import '@fontsource/poppins/300.css';
+import '@fontsource/poppins/400.css';
+import '@fontsource/poppins/500.css';
+import '@fontsource/poppins/600.css';
+import '@fontsource/poppins/700.css';
+import '@fontsource/poppins/800.css';
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -19,7 +26,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-family: "Poppins", sans-serif;
+	font-family: "Poppins";
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -31,7 +38,7 @@ body {
 	line-height: 1;
 	background-color:  ${({ theme }) => theme.body};
 	color: ${({ theme }) => theme.text};
-	transition: all 350ms ease;
+	transition: all ease-in-out 0.2s;
 }
 ol, ul {
 	list-style: none;

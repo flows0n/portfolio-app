@@ -3,7 +3,7 @@ import * as Scroll from 'react-scroll';
 
 export const Section = styled(Scroll.Element)`
   display: flex;
-  flex-flow: row wrap-reverse;
+  flex-flow: row nowrap;
   gap: auto 5px;
   justify-content: center;
   align-items: center;
@@ -18,10 +18,10 @@ export const TitleContainer = styled.div`
 
 export const Title = styled.h1`
   font-size: 2.5em;
-  font-weight: 800;
+  font-weight: 600;
 `;
 
 export const SubTitle = styled.h3`
-  font-size: 1em;
-  font-weight: 100;
+  font-size: 1.5em;
+  font-weight: 200;
 `;
