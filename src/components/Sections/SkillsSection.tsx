@@ -1,28 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-import * as Scroll from 'react-scroll';
+import Section from '../shared/Section';
 
-const Section = styled(Scroll.Element)`
-  min-height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-flow: row wrap;
-  gap: 15px;
-`;
-
-const Card = styled.div`
-  width: 80vw;
-  height: 500px;
-  background-color: ${({ theme }) => theme.nav};
-  border-radius: 32px;
+const Title = styled.h1`
+  font-size: 2.5em;
+  font-weight: 600;
 `;
 
 const SkillsSection = () => {
   return (
     <Section name="skills">
-      <Card />
-      <Card />
-      <Card />
+      <Title>skils</Title>
     </Section>
   );
 };
