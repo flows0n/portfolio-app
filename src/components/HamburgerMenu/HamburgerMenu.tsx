@@ -19,7 +19,7 @@ const Container = styled.div<IStyledContainerProps>`
   top: 0;
   right: 0;
   transform: ${({ isVisible }) => (isVisible ? 'translateX(0)' : 'translateX(100%)')};
-  background-color: ${({ theme }) => theme.nav}50;
+  background-color: ${({ theme }) => theme.body}50;
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   transition: all ease-in-out 0.2s;
@@ -28,8 +28,7 @@ const Container = styled.div<IStyledContainerProps>`
   justify-content: space-evenly;
   align-items: center;
   align-content: center;
-  padding: 32px 0px;
-  gap: 1px;
+  z-index: 99;
 `;
 
 const HamburgerMenu = ({ isVisible, children }: IHamburgerMenuProps) => {

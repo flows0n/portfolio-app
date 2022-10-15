@@ -1,7 +1,6 @@
 import React from 'react';
 import { FiLinkedin, FiGithub, FiMail } from 'react-icons/fi';
 import styled from 'styled-components';
-import useMobileView from '../../hooks/useMobileView';
 
 const Container = styled.div`
   display: flex;
@@ -12,25 +11,26 @@ const Container = styled.div`
 const Icon = styled.a`
   all: unset;
   display: block;
+  cursor: pointer;
   transition: all ease-in-out 0.2s;
+  height: fit-content;
   &:hover,
   &:active {
-    scale: 1.2;
+    scale: 1.5;
   }
 `;
 
 const SocialLinks = () => {
-  const isMobile = useMobileView();
   return (
     <Container>
       <Icon href="https://github.com/flows0n/" target="_blank" rel="noreferrer noopener">
-        <FiGithub size={isMobile ? 42 : 24} />
+        <FiGithub size={32} />
       </Icon>
       <Icon>
-        <FiLinkedin size={isMobile ? 42 : 24} />
+        <FiLinkedin size={32} />
       </Icon>
       <Icon href="mailto:b.maliszewki@outlook.com">
-        <FiMail size={isMobile ? 42 : 24} />
+        <FiMail size={32} />
       </Icon>
     </Container>
   );

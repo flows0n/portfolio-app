@@ -21,7 +21,7 @@ const Navbar = ({ toggleTheme }: IThemeTogglerProps) => {
         </>
       ) : (
         <>
-          <div style={{ zIndex: '2' }}>
+          <div style={{ zIndex: '100' }}>
             <Hamburger
               direction="left"
               toggle={setIsMenuVisible}
@@ -35,7 +35,6 @@ const Navbar = ({ toggleTheme }: IThemeTogglerProps) => {
           <HamburgerMenu isVisible={isMenuVisible}>
             <NavLinks setIsVisible={setIsMenuVisible} />
             <ThemeToggler toggleTheme={toggleTheme} />
-            <SocialLinks />
           </HamburgerMenu>
         </>
       )}
