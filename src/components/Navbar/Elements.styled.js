@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Nav = styled.nav`
   position: fixed;
   top: 0;
-  height: 64px;
+  height: min-content;
   width: 100vw;
   box-sizing: border-box;
   padding: 0px 20px;
@@ -17,4 +17,5 @@ export const NavCoontainer = styled.div`
   display: flex;
   align-items: center;
   height: inherit;
+  width: 100%;
 `;

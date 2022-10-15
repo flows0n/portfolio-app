@@ -1,10 +1,10 @@
 export const COLORS = {
-  spaceCadet: '#2B2D42',
-  manatee: '#8D99AE',
-  cultured: '#EDF2F4',
-  imperialRed: '#EF233C',
-  amaranthRed: '#D90429',
-
   black: '#000',
-  white: '#fff'
+  white: '#fff',
+
+  orangePeel: '#FFA62B',
+  isabelline: '#EDE7E3',
+  middleBlue: '#82C0CC',
+  pacificBlue: '#489FB5',
+  ming: '#16697A'
 };

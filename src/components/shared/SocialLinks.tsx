@@ -6,6 +6,7 @@ const Container = styled.div`
   display: flex;
   flex-flow: row nowrap;
   gap: 36px;
+  color: ${({ theme }) => theme.text2};
 `;
 
 const Icon = styled.a`

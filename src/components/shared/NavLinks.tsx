@@ -1,34 +1,61 @@
 import React from 'react';
 import styled from 'styled-components';
 import * as Scroll from 'react-scroll';
-import useMobileView from '../../hooks/useMobileView';
 
 interface INavLinksProps {
   setIsVisible?: (value: boolean) => void;
 }
 
-interface INavLinkProps {
-  isMobile: boolean;
-}
-
-const NavLink = styled(Scroll.Link)<INavLinkProps>`
+const NavLink = styled(Scroll.Link)`
   cursor: pointer;
+  position: relative;
+
+  padding-bottom: 10px;
+  margin: 16px 32px;
+
+  width: max-content;
+  height: min-content;
+
   box-sizing: border-box;
   display: flex;
-  width: 200px;
+  flex-flow: column nowrap;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: min-content;
-  font-weight: 500;
-  transition: all ease-in-out 0.2s;
-  font-size: ${({ isMobile }) => (isMobile ? '2em' : '1.25em')};
 
-  :hover {
-    font-size: ${({ isMobile }) => (isMobile ? '3em' : '2em')};
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: ${({ theme }) => theme.text2};
+    transform-origin: bottom right;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  &:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  & span {
+    transition: all 0.2s ease-in-out;
+  }
+  & span:nth-child(1) {
+    color: ${({ theme }) => theme.accent};
+  }
+
+  & span:nth-child(2) {
+    font-size: 1.5em;
   }
   &.active {
-    font-size: ${({ isMobile }) => (isMobile ? '3em' : '2em')};
+    & span:nth-child(1) {
+      font-size: 1.25em;
+    }
+
+    & span:nth-child(2) {
+      font-size: 2.375em;
+    }
   }
 `;
 
@@ -36,21 +63,14 @@ const NavLinks = ({ setIsVisible }: INavLinksProps) => {
   const handleClose = () => {
     if (setIsVisible) setIsVisible(false);
   };
-  const isMobile = useMobileView();
   const sections = ['aboutMe', 'skills', 'experience', 'myProjects'];
   return (
     <>
       {sections.map((e, k) => {
         return (
-          <NavLink
-            isMobile={isMobile}
-            key={k}
-            activeClass="active"
-            to={e}
-            onClick={handleClose}
-            spy
-            smooth>
-            {e}
+          <NavLink key={k} activeClass="active" to={e} onClick={handleClose} spy smooth>
+            <span>{`//0${k + 1}`}</span>
+            <span>{e}</span>
           </NavLink>
         );
       })}

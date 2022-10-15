@@ -6,11 +6,11 @@ export interface IHamburgerMenuProps {
   children?: React.ReactNode;
 }
 
-interface IStyledContainerProps {
+interface MenuProps {
   isVisible: boolean;
 }
 
-const Container = styled.div<IStyledContainerProps>`
+const Menu = styled.div<MenuProps>`
   touch-action: none;
   box-sizing: border-box;
   position: fixed;
@@ -20,19 +20,26 @@ const Container = styled.div<IStyledContainerProps>`
   right: 0;
   transform: ${({ isVisible }) => (isVisible ? 'translateX(0)' : 'translateX(100%)')};
   background-color: ${({ theme }) => theme.body}50;
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
   transition: all ease-in-out 0.2s;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-evenly;
-  align-items: center;
-  align-content: center;
   z-index: 2;
 `;
 
+const Container = styled.div`
+  display: flex;
+  flex-flow: column nowrap;
+  height: inherit;
+  justify-content: space-evenly;
+  align-items: center;
+`;
+
 const HamburgerMenu = ({ isVisible, children }: IHamburgerMenuProps) => {
-  return <Container isVisible={isVisible}>{children}</Container>;
+  return (
+    <Menu isVisible={isVisible}>
+      <Container> {children}</Container>
+    </Menu>
+  );
 };
 
 export default HamburgerMenu;

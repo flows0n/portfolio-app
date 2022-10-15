@@ -13,24 +13,32 @@ interface TitleProps {
 const TitleContainer = styled.div`
   display: flex;
   flex-flow: column nowrap;
-  gap: 10px;
-  width: 80%;
+  gap: 15px;
+  width: 60vw;
 `;
 
 const Title = styled.h1<TitleProps>`
-  font-size: 2.5em;
-  font-weight: 600;
-  font-family: ${({ font }) => (font === 'code' ? '' : 'Times New Roman')};
+  font-size: 3em;
+  font-weight: 400;
+  font-family: ${({ font }) => (font === 'code' ? 'Source Code Pro' : 'Oregano')};
+  color: ${({ theme }) => theme.accent};
   z-index: -1;
 `;
 
 const SubTitle = styled.h3`
   font-size: 1.5em;
-  font-weight: 200;
+  font-weight: 300;
+`;
+const Paragraph = styled.span`
+  font-size: 1.25em;
+  font-weight: 300;
+  line-height: 1.25em;
+  max-width: 50%;
+  min-width: 300px;
 `;
 
 const AboutMeSection = () => {
-  const strings = ['I am Frontend Developer!', 'I am UX/UI Designer!'];
+  const strings = ['<h1>I am Front-End Developer!</h1>', 'I am UX / UI Designer!'];
   const [font, setFont] = useState<Font>('code');
   const [text, count] = useTypewriter({
     words: strings,
@@ -52,7 +60,11 @@ const AboutMeSection = () => {
           {text}
           <Cursor cursorStyle="_" />
         </Title>
-        <SubTitle>Welcome on My Page!</SubTitle>
+        <Paragraph>
+          Hey! I am a young Front-End Developer. My passion is also to create graphics and design
+          interfaces for mobile and web applications. I&#39;m very pleased to have you take a look
+          at my site. I encourage you to take a look at my past works and projects.
+        </Paragraph>
         <SocialLinks />
       </TitleContainer>
     </Section>

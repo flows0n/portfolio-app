@@ -1,13 +1,15 @@
 import { COLORS } from './Colors';
 
 export const lightTheme = {
-  body: COLORS.cultured,
-  text: COLORS.spaceCadet,
-  accent: COLORS.amaranthRed
+  body: COLORS.isabelline,
+  text: COLORS.ming,
+  text2: COLORS.pacificBlue,
+  accent: COLORS.orangePeel
 };
 
 export const darkTheme = {
-  body: COLORS.spaceCadet,
-  text: COLORS.cultured,
-  accent: COLORS.imperialRed
+  body: COLORS.ming,
+  text: COLORS.isabelline,
+  text2: COLORS.middleBlue,
+  accent: COLORS.orangePeel
 };

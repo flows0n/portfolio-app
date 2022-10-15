@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+//Font Poppins
 import '@fontsource/poppins/100.css';
 import '@fontsource/poppins/200.css';
 import '@fontsource/poppins/300.css';
@@ -7,6 +8,10 @@ import '@fontsource/poppins/500.css';
 import '@fontsource/poppins/600.css';
 import '@fontsource/poppins/700.css';
 import '@fontsource/poppins/800.css';
+//Font Source Code Pro
+import '@fontsource/source-code-pro/400.css';
+//Font Oregano
+import '@fontsource/oregano';
 
 export const GlobalStyle = createGlobalStyle`
 

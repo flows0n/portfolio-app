@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const BREAKPOINT = 720;
+const BREAKPOINT = 960;
 
 const useMobileView = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < BREAKPOINT ? true : false);
