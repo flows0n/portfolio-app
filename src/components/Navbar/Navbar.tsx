@@ -5,7 +5,6 @@ import { Squash as Hamburger } from 'hamburger-react';
 import ThemeToggler, { IThemeTogglerProps } from '../shared/ThemeToggler';
 import useMobileView from '../../hooks/useMobileView';
 import NavLinks from '../shared/NavLinks';
-import SocialLinks from '../shared/SocialLinks';
 
 const Navbar = ({ toggleTheme }: IThemeTogglerProps) => {
   const [isMenuVisible, setIsMenuVisible] = useState<boolean>(false);
