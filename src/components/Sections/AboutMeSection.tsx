@@ -21,6 +21,7 @@ const Title = styled.h1<TitleProps>`
   font-size: 2.5em;
   font-weight: 600;
   font-family: ${({ font }) => (font === 'code' ? '' : 'Times New Roman')};
+  z-index: -1;
 `;
 
 const SubTitle = styled.h3`

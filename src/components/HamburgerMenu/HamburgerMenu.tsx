@@ -28,7 +28,7 @@ const Container = styled.div<IStyledContainerProps>`
   justify-content: space-evenly;
   align-items: center;
   align-content: center;
-  z-index: 99;
+  z-index: 2;
 `;
 
 const HamburgerMenu = ({ isVisible, children }: IHamburgerMenuProps) => {
