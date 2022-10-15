@@ -8,8 +8,8 @@ import '@fontsource/poppins/500.css';
 import '@fontsource/poppins/600.css';
 import '@fontsource/poppins/700.css';
 import '@fontsource/poppins/800.css';
-//Font Source Code Pro
-import '@fontsource/source-code-pro/400.css';
+//Font Fira-code
+import '@fontsource/fira-code';
 //Font Oregano
 import '@fontsource/oregano';
 

@@ -27,7 +27,10 @@ const SocialLinks = () => {
       <Icon href="https://github.com/flows0n/" target="_blank" rel="noreferrer noopener">
         <FiGithub size={32} />
       </Icon>
-      <Icon>
+      <Icon
+        href="https://www.linkedin.com/in/bartosz-maliszewski-bialystok/"
+        target="_blank"
+        rel="noreferrer noopener">
         <FiLinkedin size={32} />
       </Icon>
       <Icon href="mailto:b.maliszewki@outlook.com">

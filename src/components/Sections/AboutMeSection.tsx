@@ -14,13 +14,14 @@ const TitleContainer = styled.div`
   display: flex;
   flex-flow: column nowrap;
   gap: 15px;
-  width: 60vw;
+  max-width: 60vw;
+  min-width: 300px;
 `;
 
 const Title = styled.h1<TitleProps>`
   font-size: 3em;
   font-weight: 400;
-  font-family: ${({ font }) => (font === 'code' ? 'Source Code Pro' : 'Oregano')};
+  font-family: ${({ font }) => (font === 'code' ? 'Fira Code' : 'Oregano')};
   color: ${({ theme }) => theme.accent};
   z-index: -1;
 `;
@@ -38,7 +39,7 @@ const Paragraph = styled.span`
 `;
 
 const AboutMeSection = () => {
-  const strings = ['<h1>I am Front-End Developer!</h1>', 'I am UX / UI Designer!'];
+  const strings = ['I am Front-End Developer!', 'I am UX / UI Designer!'];
   const [font, setFont] = useState<Font>('code');
   const [text, count] = useTypewriter({
     words: strings,
@@ -55,13 +56,13 @@ const AboutMeSection = () => {
   return (
     <Section name="aboutMe">
       <TitleContainer>
-        <SubTitle>I am Bartek Maliszewski.</SubTitle>
+        <SubTitle>I&#39;m Bartek Maliszewski.</SubTitle>
         <Title font={font}>
           {text}
           <Cursor cursorStyle="_" />
         </Title>
         <Paragraph>
-          Hey! I am a young Front-End Developer. My passion is also to create graphics and design
+          Hey! I&#39;m a young Front-End Developer. My passion is also to create graphics and design
           interfaces for mobile and web applications. I&#39;m very pleased to have you take a look
           at my site. I encourage you to take a look at my past works and projects.
         </Paragraph>
