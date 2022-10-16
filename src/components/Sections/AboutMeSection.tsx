@@ -31,8 +31,8 @@ const SubTitle = styled.h3`
   font-weight: 300;
 `;
 const Paragraph = styled.span`
-  font-size: 1.25em;
-  font-weight: 300;
+  font-size: 1.125em;
+  font-weight: 200;
   line-height: 1.25em;
   max-width: 50%;
   min-width: 300px;
@@ -62,9 +62,9 @@ const AboutMeSection = () => {
           <Cursor cursorStyle="_" />
         </Title>
         <Paragraph>
-          Hey! I&#39;m a young Front-End Developer. My passion is also to create graphics and design
-          interfaces for mobile and web applications. I&#39;m very pleased to have you take a look
-          at my site. I encourage you to take a look at my past works and projects.
+          Hey! I&#39;m a young Front-End Developer. My passion is to create graphics and design
+          interfaces for mobile and web applications. I&#39;m very pleased to have you visit my
+          website. I encourage you to take a look at my past works and projects.
         </Paragraph>
         <SocialLinks />
       </TitleContainer>
