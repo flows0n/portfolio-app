@@ -8,9 +8,12 @@ import useTheme from './hooks/useTheme';
 import { darkTheme, lightTheme } from './theme/Themes';
 import MyProjectsSection from './components/Sections/MyProjectsSection';
 import SkillsSection from './components/Sections/SkillsSection';
+import useMobileView from './hooks/useMobileView';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const { theme, toggleTheme } = useTheme();
+  const isMobile = useMobileView();
 
   return (
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
@@ -21,6 +24,7 @@ function App() {
         <SkillsSection />
         <ExperienceSection />
         <MyProjectsSection />
+        {!isMobile && <Footer />}
       </>
     </ThemeProvider>
   );

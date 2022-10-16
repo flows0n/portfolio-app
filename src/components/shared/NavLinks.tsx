@@ -54,7 +54,7 @@ const NavLink = styled(Scroll.Link)`
     }
 
     & span:nth-child(2) {
-      font-size: 2.375em;
+      font-size: 2.125em;
     }
   }
 `;
