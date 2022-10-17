@@ -1,0 +1,13 @@
+{
+  "navbar": {},
+  "aboutMeSection": {
+    "subtitle": "I'm Bartek Maliszewski.",
+    "title": ["I am Front-End Developer!", "I am UX / UI Designer!"],
+    "paragraph": "Hey! I'm a young Front-End Developer. My passion is to create graphics and design interfaces for mobile and web applications. I'm very pleased to have you visit my website. I encourage you to take a look at my past works and projects."
+  },
+  "socialLinks": {
+    "github": "https://github.com/flows0n/",
+    "linkedIn": "https://www.linkedin.com/in/bartosz-maliszewski-bialystok/",
+    "email": "mailto:b.maliszewki@outlook.com"
+  }
+}

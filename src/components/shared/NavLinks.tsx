@@ -29,7 +29,7 @@ const NavLink = styled(Scroll.Link)`
     height: 2px;
     bottom: 0;
     left: 0;
-    background: ${({ theme }) => theme.text2};
+    background: ${({ theme }) => theme.secondary};
     transform-origin: bottom right;
     transition: transform 0.2s ease-in-out;
   }

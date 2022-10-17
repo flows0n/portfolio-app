@@ -5,7 +5,6 @@ export type ThemeType = 'light' | 'dark';
 const useTheme = () => {
   const [theme, setTheme] = useState(localStorage.getItem('theme') ?? 'light');
   const toggleTheme = () => {
-    console.log('toggle działa');
     if (theme !== 'dark') {
       localStorage.setItem('theme', 'dark');
       setTheme('dark');
