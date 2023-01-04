@@ -1,12 +1,13 @@
 import React from 'react';
 import { FiLinkedin, FiGithub, FiMail } from 'react-icons/fi';
 import styled from 'styled-components';
+import strings from '../../assets/constants/strings.json';
 
 const Container = styled.div`
   display: flex;
   flex-flow: row nowrap;
   gap: 36px;
-  color: ${({ theme }) => theme.text2};
+  color: ${({ theme }) => theme.secondary};
 `;
 
 const Icon = styled.a`
@@ -24,16 +25,13 @@ const Icon = styled.a`
 const SocialLinks = () => {
   return (
     <Container>
-      <Icon href="https://github.com/flows0n/" target="_blank" rel="noreferrer noopener">
+      <Icon href={strings.socialLinks.github} target="_blank" rel="noreferrer noopener">
         <FiGithub size={32} />
       </Icon>
-      <Icon
-        href="https://www.linkedin.com/in/bartosz-maliszewski-bialystok/"
-        target="_blank"
-        rel="noreferrer noopener">
+      <Icon href={strings.socialLinks.linkedIn} target="_blank" rel="noreferrer noopener">
         <FiLinkedin size={32} />
       </Icon>
-      <Icon href="mailto:b.maliszewki@outlook.com">
+      <Icon href={strings.socialLinks.email}>
         <FiMail size={32} />
       </Icon>
     </Container>

@@ -13,7 +13,7 @@ const Text = styled.span`
   font-size: 1em;
   font-weight: 200;
   text-align: center;
-  border-top: 2px solid ${({ theme }) => theme.text2};
+  border-top: 2px solid ${({ theme }) => theme.secondary};
   padding: 16px 0px 8px;
 `;
 

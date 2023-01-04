@@ -3,6 +3,7 @@ import Section from '../shared/Section';
 import styled from 'styled-components';
 import SocialLinks from '../shared/SocialLinks';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
+import strings from '../../assets/constants/strings.json';
 
 type Font = 'code' | 'ux';
 
@@ -39,10 +40,9 @@ const Paragraph = styled.span`
 `;
 
 const AboutMeSection = () => {
-  const strings = ['I am Front-End Developer!', 'I am UX / UI Designer!'];
   const [font, setFont] = useState<Font>('code');
   const [text, count] = useTypewriter({
-    words: strings,
+    words: strings.aboutMeSection.title,
     loop: false,
     typeSpeed: 100,
     deleteSpeed: 80
@@ -56,16 +56,12 @@ const AboutMeSection = () => {
   return (
     <Section name="aboutMe">
       <TitleContainer>
-        <SubTitle>I&#39;m Bartek Maliszewski.</SubTitle>
+        <SubTitle>{strings.aboutMeSection.subtitle}</SubTitle>
         <Title font={font}>
           {text}
           <Cursor cursorStyle="_" />
         </Title>
-        <Paragraph>
-          Hey! I&#39;m a young Front-End Developer. My passion is to create graphics and design
-          interfaces for mobile and web applications. I&#39;m very pleased to have you visit my
-          website. I encourage you to take a look at my past works and projects.
-        </Paragraph>
+        <Paragraph>{strings.aboutMeSection.paragraph}</Paragraph>
         <SocialLinks />
       </TitleContainer>
     </Section>
