@@ -8,7 +8,8 @@ const Section = styled(Scroll.Element)`
   gap: 32px;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 68px 30px;
 `;
 
 export default Section;

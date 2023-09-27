@@ -18,6 +18,7 @@ const ToggleContainer = styled.div`
   border-radius: 100px;
   position: relative;
   width: fit-content;
+  cursor: pointer;
 `;
 
 const Toggler = styled.div`
