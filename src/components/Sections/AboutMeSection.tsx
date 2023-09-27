@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import SocialLinks from '../shared/SocialLinks';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import strings from '../../assets/constants/strings.json';
+import { motion } from 'framer-motion';
 
 type Font = 'code' | 'ux';
 
@@ -39,6 +40,13 @@ const Paragraph = styled.span`
   min-width: 300px;
 `;
 
+const Avatar = styled(motion.img)`
+  aspect-ratio: 1/1;
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+`;
+
 const AboutMeSection = () => {
   const [font, setFont] = useState<Font>('code');
   const [text, count] = useTypewriter({
@@ -64,6 +72,13 @@ const AboutMeSection = () => {
         <Paragraph>{strings.aboutMeSection.paragraph}</Paragraph>
         <SocialLinks />
       </TitleContainer>
+      <Avatar
+        initial={{ opacity: 0, scale: 0, rotate: -180 }}
+        whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+        transition={{ duration: 1 }}
+        src="./images/avatar.png"
+        alt="avatar"
+      />
     </Section>
   );
 };
