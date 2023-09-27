@@ -8,6 +8,9 @@ const Container = styled.div`
   flex-flow: row nowrap;
   gap: 36px;
   color: ${({ theme }) => theme.secondary};
+  @media only screen and (max-width: 960px) {
+    justify-content: center;
+  }
 `;
 
 const Icon = styled.a`
