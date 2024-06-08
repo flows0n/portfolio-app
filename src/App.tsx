@@ -21,7 +21,7 @@ function App() {
         <AboutMeSection />
         <SkillsSection />
         <ExperienceSection />
-        <MyProjectsSection />
+        {/* <MyProjectsSection /> */}
         <Footer />
       </>
     </ThemeProvider>

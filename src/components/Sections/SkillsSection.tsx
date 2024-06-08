@@ -10,7 +10,7 @@ const Title = styled.h1`
 const SkillsSection = () => {
   return (
     <Section name="skills">
-      <Title>skills</Title>
+      <Title>Work in progress 😉</Title>
     </Section>
   );
 };

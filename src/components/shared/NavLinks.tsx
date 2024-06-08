@@ -63,7 +63,7 @@ const NavLinks = ({ setIsVisible }: INavLinksProps) => {
   const handleClose = () => {
     if (setIsVisible) setIsVisible(false);
   };
-  const sections = ['aboutMe', 'skills', 'experience', 'myProjects'];
+  const sections = ['aboutMe', 'skills', 'experience'];
   return (
     <>
       {sections.map((e, k) => {
