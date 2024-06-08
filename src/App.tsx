@@ -6,7 +6,7 @@ import AboutMeSection from './components/Sections/AboutMeSection';
 import ExperienceSection from './components/Sections/ExperienceSection';
 import useTheme from './hooks/useTheme';
 import { darkTheme, lightTheme } from './theme/Themes';
-import MyProjectsSection from './components/Sections/MyProjectsSection';
+// import MyProjectsSection from './components/Sections/MyProjectsSection';
 import SkillsSection from './components/Sections/SkillsSection';
 import Footer from './components/Footer/Footer';
 
